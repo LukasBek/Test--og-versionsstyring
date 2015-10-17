@@ -8,7 +8,7 @@ public class Billetautomat {
 	private int antalBilletterSolgt; // Antal billetter automaten i alt har solgt
 	private boolean montørtilstand;
 	private int totalpris;
-	
+
 	/**
 	 * Opret en billetautomat der sælger billetter til 10 kr.
 	 */
@@ -109,8 +109,14 @@ public class Billetautomat {
 	}
 
 	public void setBilletpris(int billetpris) {
-		this.billetpris = billetpris;
+		if (montørtilstand) {
+			this.billetpris = billetpris;
+		} else {
+			System.out.println("Afvist - log ind først");
+		}
 	}
+	
+
 
 	public void nulstil() {
 		if (montørtilstand) {
