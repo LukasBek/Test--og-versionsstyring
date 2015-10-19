@@ -13,7 +13,7 @@ public class Billetautomat {
 	 * Opret en billetautomat der sælger billetter til 10 kr.
 	 */
 	public Billetautomat() {
-		billetpris = 20;
+		billetpris = 200;
 		balance = 0;
 		antalBilletterSolgt = 0;
 		totalpris = 0;
@@ -76,6 +76,7 @@ public class Billetautomat {
 		System.out.println("Du får "+returbeløb+" kr retur");
 		return returbeløb;
 	}
+
 
 	
 	void montørLogin(String adgangskode) {
